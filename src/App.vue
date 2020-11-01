@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import PlanetService from './services/PlanetService.js'
 
 import Header from "./components/Header.vue";
 // import SolarSystem from "./components/SolarSystem.vue";

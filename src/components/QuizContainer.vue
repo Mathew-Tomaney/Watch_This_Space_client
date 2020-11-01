@@ -1,5 +1,9 @@
 <template lang="html">
-  
+  <aside>
+      <h2>THIS WILL BE THE QUIZ SECTION</h2>
+      <quiz-form></quiz-form>
+      <quiz-questions></quiz-questions>
+  </aside>
 </template>
 
 <script>
@@ -18,5 +22,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+aside{
+  background-color: #243141;
+}
 
 </style>

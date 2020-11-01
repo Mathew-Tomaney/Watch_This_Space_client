@@ -2,6 +2,9 @@
 <main>
   <header-component />
   <h1>Watch This Space Frontend</h1>
+  <planet-facts-container></planet-facts-container>
+  <quiz-container></quiz-container>
+  <planet-reel></planet-reel>
   <footer-component />
 </main>
 </template>

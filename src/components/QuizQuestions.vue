@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'quiz-q&a'
+    name: 'quiz-questions'
 
 }
 </script>

@@ -3,9 +3,14 @@
 </template>
 
 <script>
-export default {
-    name: 'planet-fact-container'
+// import PlanetFact from "./components/PlanetFact.vue";
 
+export default {
+    name: 'planet-facts-container',
+
+//     components: {
+//     'planet-fact' : PlanetFact
+// }
 }
 </script>
 

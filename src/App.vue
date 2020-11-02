@@ -3,21 +3,24 @@
   <header-component />
   <h1>Watch This Space Frontend</h1>
   <solar-system :planets='planets'></solar-system>
-  <planet-fact-container v-if='planets.length' :planets='planets' />
+  <planet-fact-container  :selectedPlanet='selectedPlanet' />
 
+  <quiz-container :selectedPlanet='selectedPlanet'/>
   <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>
 </template>
 
 <script>
+import { eventBus } from "@/main.js";
 import PlanetService from "./services/PlanetService.js";
 
 import Header from "./components/Header.vue";
 import SolarSystem from "./components/SolarSystem.vue";
-// import Planet from "./components/Planet.vue";
 import PlanetFactContainer from "./components/PlanetFactContainer";
 import PlanetFact from "./components/PlanetFact.vue";
+
+import QuizContainer from "./components/QuizContainer.vue";
 
 import PlanetReel from "./components/PlanetReel.vue";
 import Footer from "./components/Footer.vue";
@@ -27,7 +30,8 @@ export default {
 
   data(){
     return{
-      planets: []
+      planets: [],
+      selectedPlanet: null
   }
   },
 
@@ -36,13 +40,17 @@ export default {
     'footer-component' : Footer,
     'planet-fact-container' : PlanetFactContainer,
     'planet-fact' : PlanetFact,
-    
+    'quiz-container' : QuizContainer,
     'planet-reel' : PlanetReel,
     'solar-system' : SolarSystem
   },
 
   mounted(){
     this.fetchPlanets();
+
+    eventBus.$on('selected-planet', payload => {
+      this.selectedPlanet = payload
+    })
   },
 
   methods: {

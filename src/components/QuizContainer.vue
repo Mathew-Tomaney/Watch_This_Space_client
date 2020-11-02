@@ -1,7 +1,7 @@
 <template lang="html">
   <aside>
       <h2>THIS WILL BE THE QUIZ SECTION</h2>
-      <quiz-questions></quiz-questions>
+      <!-- <quiz-questions :selectedPlanet="selectedPlanet"></quiz-questions> -->
   </aside>
 </template>
 
@@ -10,6 +10,7 @@
 
 export default {
     name: 'quiz-container',
+    props: ['selectedPlanet']
 
     // components: {
     //     'quiz-questions' : QuizQuestions
@@ -22,6 +23,7 @@ export default {
 
 aside{
   background-color: #243141;
+  height: 30vh;
 }
 
 </style>

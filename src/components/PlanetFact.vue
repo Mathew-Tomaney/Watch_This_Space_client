@@ -1,12 +1,12 @@
 <template lang="html">
   <aside>
-      <section v-if='planet'>
+      <section v-if='selectedPlanet'>
         <hgroup>
-          <p>{{planet.description}}</p>
-          <h4>{{planet.name}} has {{planet.funFacts.moons}} moons.</h4>
-          <h4>The length of year in {{planet.name}} is {{planet.funFacts.yearLength}}</h4>
+          <p>{{selectedPlanet.description}}</p>
+          <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>
+          <h4>The length of year in {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
         </hgroup>
-      <img :src="planet.img" alt="planet image" />
+      <img :src="selectedPlanet.img" alt="planet image" />
     </section>
   </aside>
 </template>
@@ -14,13 +14,13 @@
 <script>
 export default {
     name: 'planet-fact',
-    props: ['planet'],
+    props: ['selectedPlanet'],
 
-    data(){
-        return{
-            planetObject: null
-        }
-    }
+    // data(){
+    //     return{
+    //         planetObject: null
+    //     }
+    // }
 }
 </script>
 

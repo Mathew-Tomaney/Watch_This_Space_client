@@ -4,7 +4,7 @@
   <h1>Watch This Space Frontend</h1>
   <solar-system :planets='planets'></solar-system>
   <planet-fact-container v-if='planets.length' :planets='planets' />
-  <!-- <quiz-container></quiz-container> -->
+
   <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>
@@ -15,13 +15,12 @@ import PlanetService from "./services/PlanetService.js";
 
 import Header from "./components/Header.vue";
 import SolarSystem from "./components/SolarSystem.vue";
-import Planet from "./components/Planet.vue";
+// import Planet from "./components/Planet.vue";
 import PlanetFactContainer from "./components/PlanetFactContainer";
 import PlanetFact from "./components/PlanetFact.vue";
-import QuizContainer from "./components/QuizContainer.vue";
+
 import PlanetReel from "./components/PlanetReel.vue";
 import Footer from "./components/Footer.vue";
-
 
 export default {
   name: 'app',
@@ -37,7 +36,7 @@ export default {
     'footer-component' : Footer,
     'planet-fact-container' : PlanetFactContainer,
     'planet-fact' : PlanetFact,
-    'quiz-container' : QuizContainer,
+    
     'planet-reel' : PlanetReel,
     'solar-system' : SolarSystem
   },

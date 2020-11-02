@@ -1,6 +1,6 @@
 <template lang="html">
     <aside>
-        <img :src="planet.img" alt="planet image"></img>
+        <img :src="planet.img" alt="planet image" width="auto" height="250px"></img>
     </aside>
 </template>
 

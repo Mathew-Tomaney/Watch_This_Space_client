@@ -11,7 +11,7 @@ import Planet from "@/components/Planet.vue";
 export default {
     name: 'solar-system',
     props: ['planets'],
-    component:{
+    components:{
       'individual-planet': Planet
     }
 }

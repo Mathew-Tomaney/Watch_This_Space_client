@@ -18,7 +18,7 @@ export default {
 
     data(){
         return{
-            planet: []
+            planetObject: null
         }
     }
 }

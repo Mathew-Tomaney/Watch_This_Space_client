@@ -1,19 +1,19 @@
 <template lang="html">
     <aside>
-        <img :planet='planet' :src="planet.img" alt="planet image"></img>
+        <img :src="planet.img" alt="planet image"></img>
     </aside>
 </template>
 
 <script>
 export default {
-    name: 'planet',
+    name: 'individual-planet',
     props:['planet'],
 
-    data(){
-        return{
-            planet: {}
-        }
-    }
+    // data(){
+    //     return{
+    //         planetObject: {}
+    //     }
+    // }
 }
 
 </script>

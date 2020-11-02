@@ -3,7 +3,7 @@
   <header-component />
   <h1>Watch This Space Frontend</h1>
   <solar-system :planets='planets'></solar-system>
-  <planet-fact-container :planets='planets' />
+  <planet-fact-container v-if='planets.length' :planets='planets' />
   <!-- <quiz-container></quiz-container> -->
   <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />

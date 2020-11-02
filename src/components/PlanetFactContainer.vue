@@ -10,7 +10,7 @@ import PlanetFact from "./components/PlanetFact.vue";
 
 export default {
     name: 'planet-fact-container',
-    props: ['planets']
+    props: ['planets'],
 
     components: {
     'planet-fact' : PlanetFact

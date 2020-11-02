@@ -6,14 +6,12 @@
 </template>
 
 <script>
-// import QuizForm from "./components/QuizForm.vue";
-// import QuizQuestions from "./components/QuizQuestions.vue";
+// import QuizQuestions from "./QuizQuestions.vue";
 
 export default {
     name: 'quiz-container',
 
     // components: {
-    //     'quiz-form' : QuizForm,
     //     'quiz-questions' : QuizQuestions
     // }
 

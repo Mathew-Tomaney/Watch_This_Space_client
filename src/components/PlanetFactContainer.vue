@@ -1,6 +1,6 @@
 <template lang="html">
   <section>
-    <h2>THIS WLL BE THE FUN FACTS SECTION</h2>
+    <h2>THIS WILL BE THE FUN FACTS SECTION</h2>
     <planet-fact v-for="(planet, index) in planets" :key='index' :planet="planet"></planet-fact>
   </section>
 </template>
@@ -14,7 +14,7 @@ export default {
 
     components: {
     'planet-fact' : PlanetFact
-}
+    }
 }
 </script>
 

@@ -23,12 +23,29 @@ import Footer from "./components/Footer.vue";
 export default {
   name: 'app',
 
+  data(){
+    return{
+      planets = []
+  }
+  },
+
   components: {
     'header-component' : Header,
     'footer-component' : Footer,
     'planet-facts-container' : PlanetFactsContainer,
     'quiz-container' : QuizContainer,
     'planet-reel' : PlanetReel
+  },
+
+  mounted(){
+    this.fetchPlanets();
+  },
+
+  methods: {
+    fetchPlanets(){
+      PlanetService.getPlanets()
+      .then(planets => this.planets = planets)
+    }
   }
 }
 </script>

@@ -34,8 +34,8 @@ export default {
   components: {
     'header-component' : Header,
     'footer-component' : Footer,
-    'planet-fact-container' : PlanetFactContainer,
-    'planet-fact' : PlanetFact,
+    // 'planet-fact-container' : PlanetFactContainer,
+    // 'planet-fact' : PlanetFact,
     'quiz-container' : QuizContainer,
     'planet-reel' : PlanetReel
   },

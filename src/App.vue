@@ -4,7 +4,7 @@
   <h1>Watch This Space Frontend</h1>
   <planet-facts-container></planet-facts-container>
   <quiz-container></quiz-container>
-  <planet-reel></planet-reel>
+  <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>
 </template>
@@ -25,7 +25,7 @@ export default {
 
   data(){
     return{
-      planets = []
+      planets: []
   }
   },
 

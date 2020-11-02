@@ -11,7 +11,13 @@
 <script>
 export default {
     name: 'planet-fact',
-    props: ['planet']
+    props: ['planet'],
+
+    data(){
+        return{
+            planet: []
+        }
+    }
 }
 </script>
 

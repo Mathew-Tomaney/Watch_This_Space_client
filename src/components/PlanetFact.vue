@@ -24,10 +24,12 @@ export default {
 }
 </script>
 
+
 <style lang="css" scoped>
 
 aside{
     background: #47CDC6;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
     width: 80vw;
     height: 35vh;
     border-radius: 20px;

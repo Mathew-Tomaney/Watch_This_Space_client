@@ -31,7 +31,6 @@ img{
     margin: 10px;
     border-radius: 10px;
     align-content: center;
-    ima
 
     cursor: pointer;
 

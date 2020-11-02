@@ -41,10 +41,10 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  margin-left: -15px;
+  width: 1em;
+  height: 1em;
+  margin-top: -.5em;
+  margin-left: -.5em;
   border-radius: 50%;
   background-color: #FB7209;
   box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);

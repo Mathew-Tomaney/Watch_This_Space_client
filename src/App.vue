@@ -1,7 +1,7 @@
 <template lang="html">
 <main>
   <header-component />
-  <h1>Watch This Space Frontend</h1>
+  <!-- <h1>Watch This Space Frontend</h1> -->
   <solar-system :planets='planets'></solar-system>
   <planet-fact-container  :selectedPlanet='selectedPlanet' />
 
@@ -64,5 +64,11 @@ export default {
 
 <style lang="css">
 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+main{
+  font-family: 'Luckiest Guy', cursive;
+  color: #C6F65A;
+}
 
 </style>

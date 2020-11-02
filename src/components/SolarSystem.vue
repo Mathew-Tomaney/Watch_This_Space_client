@@ -1,7 +1,9 @@
 <template lang="html">
   <section>
-    <h2>SOLAR SYSTEM ANIMATION</h2>
+    <!-- <h2>SOLAR SYSTEM ANIMATION</h2> -->
+    <div id="galaxy">
     <individual-planet v-for='(planet, index) in planets' :key='index' :planet="planet" :class="planet.name"></individual-planet>
+    </div>
   </section>
 </template>
 
@@ -19,5 +21,34 @@ export default {
 
 <style lang="css" scoped>
 
+ section{
+   background-image: url(../assets/2k_stars_milky_way.jpg);
+   height: 55vh;
+   width: 100vw;
+   background-position: center;
+   background-size: cover;
+   margin: 0px;
+
+ }
+
+ #galaxy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+ .sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  background-color: #FB7209;
+  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
+  z-index: 1;
+}
 
 </style>

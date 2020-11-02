@@ -22,13 +22,14 @@ header {
   flex-flow: wrap row;
   justify-content:flex-start;
   background-color: #556272;
+  margin: auto;
 
-  padding: 10px;
+  font-size: 1.5em;
 }
 
 #nav-bar{
   justify-self: flex-end;
-  padding: 20px;
+  padding: 5px;
 }
 
 </style>

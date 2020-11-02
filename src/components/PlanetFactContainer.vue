@@ -22,5 +22,7 @@ export default {
 
 section{
     background-color:#C64D56;
+    height: 45vh;
+    margin: 0px;
 }
 </style>

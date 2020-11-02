@@ -28,10 +28,11 @@ export default {
 
 aside{
     background: #47CDC6;
-    width: 30vw;
-    height: 20vh;
+    width: 80vw;
+    height: 35vh;
     border-radius: 20px;
-    margin: 40px;
+    margin: auto;
+    align-content: center;
 }
 
 section{

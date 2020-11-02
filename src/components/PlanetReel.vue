@@ -18,7 +18,8 @@ export default {
 
 section{
     background-color: #C6F65A;
-    
+    height: 20vh;
+    width: 100vw;
 }
 
 ul {
@@ -28,9 +29,12 @@ ul {
 img{
     width: 15vw;
     margin: 10px;
-    cursor: pointer;
     border-radius: 10px;
     align-content: center;
+    ima
+
+    cursor: pointer;
+
 }
 
 .scroll-box{

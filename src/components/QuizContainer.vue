@@ -1,20 +1,18 @@
 <template lang="html">
   <aside>
       <h2>THIS WILL BE THE QUIZ SECTION</h2>
-      <quiz-form></quiz-form>
-      <quiz-questions></quiz-questions>
+      <!-- <quiz-questions :selectedPlanet="selectedPlanet"></quiz-questions> -->
   </aside>
 </template>
 
 <script>
-// import QuizForm from "./components/QuizForm.vue";
-// import QuizQuestions from "./components/QuizQuestions.vue";
+// import QuizQuestions from "./QuizQuestions.vue";
 
 export default {
     name: 'quiz-container',
+    props: ['selectedPlanet']
 
     // components: {
-    //     'quiz-form' : QuizForm,
     //     'quiz-questions' : QuizQuestions
     // }
 
@@ -25,6 +23,7 @@ export default {
 
 aside{
   background-color: #243141;
+  height: 30vh;
 }
 
 </style>

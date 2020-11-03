@@ -1,20 +1,27 @@
 <template lang="html">
   <aside>
-      <section v-if='selectedPlanet'>
-        <hgroup>
-          <p>{{selectedPlanet.description}}</p>
-          <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>
-          <h4>The length of year in {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
-        </hgroup>
+    <section v-if='selectedPlanet'>
+      <hgroup>
+        <p>{{selectedPlanet.description}}</p>
+        <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>
+        <h4>The length of year in {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
+      </hgroup>
       <img :src="selectedPlanet.img" alt="planet image" />
+      <button v-on:click="takeQuiz">Take a Quiz!</button>
     </section>
   </aside>
 </template>
 
 <script>
+import { eventBus } from "@/main.js";
 export default {
     name: 'planet-fact',
     props: ['selectedPlanet'],
+    methods: {
+      takeQuiz: function() {
+        eventBus.$emit('take-quiz')
+      }
+    }
 
     // data(){
     //     return{

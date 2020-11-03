@@ -3,10 +3,10 @@
   <header-component />
   <!-- <h1>Watch This Space Frontend</h1> -->
   <solar-system :planets='planets'></solar-system>
-  <!-- <planet-fact-container  :selectedPlanet='selectedPlanet' /> -->
+  <planet-fact-container v-if="!this.takeQuiz"  :selectedPlanet='selectedPlanet' />
 
-  <quiz-container v-if="this.selectedPlanet" :planets='planets' :selectedPlanet='selectedPlanet'/>
-  <!-- <planet-reel v-if='planets.length' :planets='planets'></planet-reel> -->
+  <quiz-container v-if="this.takeQuiz" :planets='planets' :selectedPlanet='selectedPlanet'/>
+  <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>
 </template>
@@ -31,7 +31,8 @@ export default {
   data(){
     return{
       planets: [],
-      selectedPlanet: null
+      selectedPlanet: null,
+      takeQuiz: false
   }
   },
 
@@ -49,7 +50,11 @@ export default {
     this.fetchPlanets();
 
     eventBus.$on('selected-planet', payload => {
-      this.selectedPlanet = payload
+      this.selectedPlanet = payload;
+      this.takeQuiz = false;
+    })
+    eventBus.$on('take-quiz', () => {
+      this.takeQuiz = true
     })
   },
 

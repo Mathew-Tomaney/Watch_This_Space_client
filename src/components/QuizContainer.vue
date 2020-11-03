@@ -1,20 +1,20 @@
 <template lang="html">
   <aside>
       <h2>THIS WILL BE THE QUIZ SECTION</h2>
-      <!-- <quiz-questions :selectedPlanet="selectedPlanet"></quiz-questions> -->
+      <quiz-questions :planets="planets" :selectedPlanet="selectedPlanet"></quiz-questions>
   </aside>
 </template>
 
 <script>
-// import QuizQuestions from "./QuizQuestions.vue";
+import QuizQuestions from "./QuizQuestions.vue";
 
 export default {
     name: 'quiz-container',
-    props: ['selectedPlanet']
+    props: ['selectedPlanet', 'planets'],
 
-    // components: {
-    //     'quiz-questions' : QuizQuestions
-    // }
+    components: {
+        'quiz-questions' : QuizQuestions
+    }
 
 }
 </script>

@@ -5,7 +5,7 @@
   <solar-system :planets='planets'></solar-system>
   <planet-fact-container  :selectedPlanet='selectedPlanet' />
 
-  <quiz-container :selectedPlanet='selectedPlanet'/>
+  <quiz-container :planets='planets' :selectedPlanet='selectedPlanet'/>
   <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>

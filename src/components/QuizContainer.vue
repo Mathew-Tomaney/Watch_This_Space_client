@@ -60,12 +60,14 @@ export default {
         else {
           this.result = "Incorrect"
         }
-        console.log("hi")
       }
     },
     mounted() {
       eventBus.$on('selected-answer', (payload) => {
         this.selectedAnswer = payload
+      })
+      eventBus.$on('selected-planet', (payload) => {
+        this.selectedAnswer = ""
       })
     }
 }

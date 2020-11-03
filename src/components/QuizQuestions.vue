@@ -1,7 +1,6 @@
 <template lang="html">
     <div>
-        <h3>{{selectedPlanet.quiz.questions[0].question}}</h3>
-        ul
+    <h2>{{selectedQuestion}}</h2>
     </div>
 </template>
 
@@ -9,11 +8,7 @@
 
 export default {
     name: 'quiz-questions',
-    props: ['planets', 'selectedPlanet']
-
-
-
-
+    props: ['selectedQuestion'],
 }
 
 </script>

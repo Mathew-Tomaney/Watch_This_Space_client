@@ -78,6 +78,7 @@ export default {
 aside{
   background-color: #243141;
   height: 30vh;
+  color: white;
 }
 
 </style>

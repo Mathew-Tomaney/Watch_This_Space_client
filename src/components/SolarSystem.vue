@@ -1,13 +1,16 @@
 <template lang="html">
-  <section>
+  <section >
     <!-- <h2>SOLAR SYSTEM ANIMATION</h2> -->
-    <div id="galaxy">
-    <individual-planet v-for='(planet, index) in planets' :key='index' :planet="planet" :class="planet.name"></individual-planet>
+    <div id="universe">
+      <div id="galaxy">
+        <individual-planet v-for='(planet, index) in planets' :key='index' :planet="planet" :orbitClass="planet.isPlanet ? 'orbit' : ''"></individual-planet>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import { eventBus } from "@/main.js";
 import Planet from "@/components/Planet.vue";
 
 export default {
@@ -28,27 +31,25 @@ export default {
    background-position: center;
    background-size: cover;
    margin: 0px;
-
  }
+ 
+ #universe {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  height: 55vh;
+  width: 100vw;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
 
- /* #galaxy {
+ #galaxy {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
- .sun {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  margin-top: -.5em;
-  margin-left: -.5em;
-  border-radius: 50%;
-  background-color: #FB7209;
-  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
-  z-index: 1;
-} */
+
 
 </style>

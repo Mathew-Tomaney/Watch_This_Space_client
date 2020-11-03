@@ -1,38 +1,39 @@
 <template lang="html">
   <aside>
       <h2>THIS WILL BE THE QUIZ SECTION</h2>
-      <quiz-questions :selectedQuestion='this.selectedQuestion'></quiz-questions>
+      <quiz-questions :selectedQuestion='this.randomQuestion.question'></quiz-questions>
+      <quiz-answers v-for="(answer, index) in this.allAnswers" :answer='answer' :key="index"></quiz-answers>
       <!-- <button :on-click="this.getRandomQuestion">BUTTON</button> -->
   </aside>
 </template>
 
 <script>
 import QuizQuestions from "./QuizQuestions.vue";
-
+import QuizAnswers from "./QuizAnswers.vue";
 export default {
     name: 'quiz-container',
     props: ['selectedPlanet', 'planets'],
-
     components: {
-        'quiz-questions' : QuizQuestions
+        'quiz-questions' : QuizQuestions,
+        'quiz-answers' : QuizAnswers
     },
-
-    data () {
-      return {
-        selectedQuestion: this.getRandomQuestion(),
+    computed: {
+      randomQuestion: function () {
+        return this.getRandomQuestion()
+      },
+      allAnswers: function () {
+        const answers = []
+        answers.push(this.randomQuestion.answer)
+        for (const wrongAnswer of this.randomQuestion.wrong) {
+          answers.push(wrongAnswer)
+        }
+        return answers
       }
     },
-
-    // computed: {
-    //   randomQuestion: function () {
-    //     return this.getRandomQuestion()
-    //   }
-    // },
-
     methods: {
       getRandomQuestion: function() {
         const num = Math.floor((Math.random() * this.selectedPlanet.quiz.questions.length))
-        return this.selectedPlanet.quiz.questions[num].question
+        return this.selectedPlanet.quiz.questions[num]
       }
     }
 

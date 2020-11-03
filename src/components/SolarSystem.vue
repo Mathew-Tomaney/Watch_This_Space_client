@@ -1,7 +1,6 @@
 <template lang="html">
   <section >
     <!-- <h2>SOLAR SYSTEM ANIMATION</h2> -->
-    <div id="universe">
       <div id="galaxy">
         <individual-planet v-for='(planet, index) in planets' :key='index' :planet="planet" :orbitClass="planet.isPlanet ? 'orbit' : ''"></individual-planet>
       </div>
@@ -26,29 +25,26 @@ export default {
 
  section {
    background-image: url(../assets/2k_stars_milky_way.jpg);
-   height: 55vh;
+   height: 40vh;
    width: 100vw;
    background-position: center;
    background-size: cover;
    margin: 0px;
+   font-size: 6em;
  }
- 
- #universe {
-  z-index: 1;
-  position: absolute;
-  overflow: hidden;
-  height: 55vh;
-  width: 100vw;
-  background-position: center 40%;
-  background-repeat: no-repeat;
-  background-size: cover; 
-}
 
  #galaxy {
-  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* position: relative;
   width: 100%;
-  height: 100%;
+  height: 100%; */
+
+  justify-content: center;
+  align-content: center;
 }
+
+
 
 
 

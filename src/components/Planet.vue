@@ -29,77 +29,112 @@ export default {
 <style lang='css' >
 
 .Sun{
-  background-color: #FB7209;
-  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
   z-index: 1;
-
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-image: url(../assets/2k_sun.jpg);
+  box-shadow: inset -25px -25px 50px rgba(0,0,0,.5);
 
-  font-size: 24em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  align-content: center;
 }
 
-.Sun .planet {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  margin-top: -.5em;
-  margin-left: -.5em;
+.Mercury{
+  z-index: 2;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_mercury.jpg);
+  box-shadow: inset -5px -5px 20px rgba(0,0,0,.5);
+  
+  width: 0.18em;
+  height: 0.18em;
   border-radius: 50%;
 }
 
-.planet {
-  background-color: #525151;
+.Venus{
+  z-index: 3;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_venus_atmosphere.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
+
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+}
+
+.Earth{
+  z-index: 4;
   background-repeat: no-repeat;
   background-size: cover;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
+  background-image: url(../assets/2k_earth_daymap.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
 
-.Mercury .planet{
-  left: 0%;
-  top: 50%;
-}
-
-.orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 0.3em;
+  height: 0.3em;
   border-radius: 50%;
-  animation-name: orbit;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
-.Mercury .orbit .planet{
-  width: 12em;
-  height: 12em;
-  margin-top: -6em;
-  margin-left: -6em; 
-  animation-duration: 3s;
+.Mars{
+  z-index: 5;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_mars.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
+
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
 }
 
-.myelement {
-  animation: 'fader' 2s linear;
-  animation-name: orbit;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.Jupiter{
+  z-index: 6;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_jupiter.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
+
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
 }
 
-@keyframes orbit {
-  0%   { transform: rotateZ(0deg); }
-  100% { transform: rotateZ(-360deg); }
+.Saturn{
+  z-index: 7;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_venus_surface.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
+
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 50%;
 }
 
-.Sun {
-    
+.Uranus{
+  z-index: 8;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_uranus.jpg);
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
+
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
 }
-.Mercury {
-    font-size: 1em;  
+
+.Neptune{
+  z-index: 9;
+  background-repeat: repeat;
+  background-size: cover;
+  background-image: url(../assets/2k_neptune.jpg);
+  box-shadow: inset -5px -5px 5px rgba(0,0,0,.5);
+
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
 }
 
 </style>

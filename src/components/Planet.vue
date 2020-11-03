@@ -38,7 +38,8 @@ export default {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  align-content: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .Mercury{
@@ -51,6 +52,8 @@ export default {
   width: 0.18em;
   height: 0.18em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Venus{
@@ -63,6 +66,8 @@ export default {
   width: 0.3em;
   height: 0.3em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Earth{
@@ -75,6 +80,8 @@ export default {
   width: 0.3em;
   height: 0.3em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Mars{
@@ -87,6 +94,8 @@ export default {
   width: 0.2em;
   height: 0.2em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Jupiter{
@@ -99,6 +108,8 @@ export default {
   width: 0.6em;
   height: 0.6em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Saturn{
@@ -111,6 +122,8 @@ export default {
   width: 0.45em;
   height: 0.45em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Uranus{
@@ -123,6 +136,8 @@ export default {
   width: 0.25em;
   height: 0.25em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .Neptune{
@@ -135,6 +150,41 @@ export default {
   width: 0.2em;
   height: 0.2em;
   border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.orbit {
+    transform-style: preserve-3d;
+    animation-name: rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+@keyframes bounce {
+    0% {
+        top: 0px
+    }
+
+    50% {
+        top: 25px;
+        bottom: 50px;
+        height: 5vh;
+    }
+    100% {
+        top: 0px;
+    }
 }
 
 </style>

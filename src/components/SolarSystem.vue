@@ -24,7 +24,7 @@ export default {
 <style lang="css" scoped>
 
  section {
-   background-image: url(../assets/2k_stars_milky_way.jpg);
+   background-image: url(../assets/2k_stars.jpg);
    height: 40vh;
    width: 100vw;
    background-position: center;
@@ -36,9 +36,9 @@ export default {
  #galaxy {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* position: relative;
   width: 100%;
-  height: 100%; */
+  height: 100%;
+  margin: auto;
 
   justify-content: center;
   align-content: center;

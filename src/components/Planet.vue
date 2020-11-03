@@ -1,5 +1,6 @@
 <template lang="html">
     <aside>
+
         <img @click="handleClick(planet)" :src="planet.img" alt="planet image" width="auto" height="250px"></img>
     </aside>
 </template>
@@ -28,6 +29,7 @@ export default {
 
 </script>
 
-<style lang='css'>
+<style lang='css' scoped>
+
 
 </style>

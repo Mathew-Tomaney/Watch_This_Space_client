@@ -21,7 +21,7 @@ export default {
 
 <style lang="css" scoped>
 
- section{
+ section {
    background-image: url(../assets/2k_stars_milky_way.jpg);
    height: 55vh;
    width: 100vw;
@@ -31,7 +31,7 @@ export default {
 
  }
 
- #galaxy {
+ /* #galaxy {
   position: relative;
   width: 100%;
   height: 100%;
@@ -49,6 +49,6 @@ export default {
   background-color: #FB7209;
   box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
   z-index: 1;
-}
+} */
 
 </style>

@@ -28,10 +28,6 @@ export default {
 
 <style lang='css' >
 
-area:hover{
-  transition: transform .2s;
-}
-
 .Sun{
   z-index: 1;
   background-repeat: repeat;
@@ -128,6 +124,7 @@ area:hover{
   border-radius: 50%;
   justify-self: center;
   align-self: center;
+
 }
 
 .Uranus{
@@ -159,35 +156,18 @@ area:hover{
 }
 
 .orbit {
-    transform-style: preserve-3d;
-    animation-name: rotation;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    
+  transform-style: preserve-3d;
+  animation-name: rotation;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes rotation {
-  from {
+    from {
     transform: rotate(0deg);
-  }
-  to {
+    }
+    to {
     transform: rotate(359deg);
-  }
-}
-
-
-@keyframes bounce {
-    0% {
-        top: 0px
-    }
-
-    50% {
-        top: 25px;
-        bottom: 50px;
-        height: 5vh;
-    }
-    100% {
-        top: 0px;
     }
 }
 

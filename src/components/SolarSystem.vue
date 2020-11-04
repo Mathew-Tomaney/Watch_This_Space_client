@@ -42,14 +42,18 @@ export default {
 
   justify-content: center;
   align-content: center;
+
+  transform-style: preserve-3d;
+  animation-name: bounce-1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+    
 }
-
-individual-planet:hover {
-  transform: scale(1.5); 
-}
-
-
-
-
+  @keyframes bounce-1 {
+    
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
 
 </style>

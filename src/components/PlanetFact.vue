@@ -12,7 +12,7 @@
       </hgroup>
       <div class="fact-img">
         <img :src="selectedPlanet.img" alt="planet image" />
-        <button class="button" v-on:click="takeQuiz"><span>Take a Quiz!</span></button>
+        <button class="button" v-on:click="takeQuiz"><span>Question Time!</span></button>
       </div>
     </section>
   </aside>

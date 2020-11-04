@@ -44,6 +44,9 @@ export default {
   align-content: center;
 }
 
+individual-planet:hover {
+  transform: scale(1.5); 
+}
 
 
 

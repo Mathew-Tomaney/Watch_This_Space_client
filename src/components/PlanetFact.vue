@@ -1,6 +1,6 @@
 <template lang="html">
   <aside>
-    <section v-if='selectedPlanet'>
+    <section>
       <hgroup>
         <p>{{selectedPlanet.description}}</p>
         <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>

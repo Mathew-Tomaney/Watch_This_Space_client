@@ -3,8 +3,7 @@
   <header-component />
   <!-- <h1>Watch This Space Frontend</h1> -->
   <solar-system :planets='planets'></solar-system>
-  <planet-fact-container v-if="!this.takeQuiz"  :selectedPlanet='selectedPlanet' />
-
+  <planet-fact-container v-if="!this.takeQuiz && this.selectedPlanet"  :selectedPlanet='selectedPlanet' />
   <quiz-container v-if="this.takeQuiz" :planets='planets' :selectedPlanet='selectedPlanet'/>
   <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
@@ -55,6 +54,10 @@ export default {
     })
     eventBus.$on('take-quiz', () => {
       this.takeQuiz = true
+    })
+    eventBus.$on('go-launchpad', () => {
+      this.takeQuiz = false
+      this.selectedPlanet = null
     })
   },
 

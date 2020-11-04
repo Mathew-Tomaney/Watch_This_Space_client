@@ -12,7 +12,7 @@
       </hgroup>
       <div class="fact-img">
         <img :src="selectedPlanet.img" alt="planet image" />
-        <button v-on:click="takeQuiz">Take a Quiz!</button>
+        <button class="button" v-on:click="takeQuiz"><span>Take a Quiz!</span></button>
       </div>
     </section>
   </aside>
@@ -52,7 +52,7 @@ h4 {
   background-color: white;
   border-radius: 5px;
   padding: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -70,7 +70,7 @@ p {
   background-color: white;
   border-radius: 5px;
   padding: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -82,7 +82,7 @@ img{
   margin-bottom: 10px;
 }
 
-button {
+.button {
   font-family: 'Luckiest Guy', cursive;
   padding: 10px;
   width: 20vw;
@@ -91,6 +91,38 @@ button {
   font-size: 1em;
   color: #C6F65A;
   background-color: #C64D56;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #C6F65A;
+  color: #C64D56;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 hgroup {

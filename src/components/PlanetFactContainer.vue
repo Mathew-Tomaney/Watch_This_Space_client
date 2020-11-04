@@ -31,7 +31,7 @@ h2 {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 20px;
-  padding-left: 80px;
+  padding-left: 90px;
   text-shadow: 2px 2px 6px #243141;
 }
 </style>

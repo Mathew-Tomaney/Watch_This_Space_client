@@ -15,13 +15,10 @@ export default {
         }
     }
 }
-
 </script>
 
 <style lang="css" scoped>
-
 h3 {
     color: white;
 }
-
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <aside>
-    <section v-if='selectedPlanet'>
+    <section>
       <hgroup>
         <p>{{selectedPlanet.description}}</p>
         <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moon<span v-if="selectedPlanet.funFacts.moons > 1 || selectedPlanet.funFacts.moons <= 0">s</span>.</h4>

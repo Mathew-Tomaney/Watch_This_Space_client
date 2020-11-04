@@ -3,11 +3,11 @@
     <section v-if='selectedPlanet'>
       <hgroup>
         <p>{{selectedPlanet.description}}</p>
-        <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>
+        <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moon<span v-if="selectedPlanet.funFacts.moons > 1 || selectedPlanet.funFacts.moons <= 0">s</span>.</h4>
         <h4>One year on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
-        <h4>One day lasts for {{selectedPlanet.funFacts.oneEarthDay}}.</h4>
+        <h4 v-if="selectedPlanet.funFacts.oneEarthDay">One day lasts for {{selectedPlanet.funFacts.oneEarthDay}}.</h4>
         <h4>Gravity on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.gravity}}</h4>
-        <h4>{{selectedPlanet.name}} is a {{selectedPlanet.funFacts.planetType}} type planet.</h4>
+        <h4>{{selectedPlanet.name}} is a<span v-if="selectedPlanet.funFacts.planetType.charAt(0) === 'I'">n</span> {{selectedPlanet.funFacts.planetType}} type planet.</h4>
         <h4>Temperature on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.temperature}}</h4>
       </hgroup>
       <img :src="selectedPlanet.img" alt="planet image" />
@@ -21,10 +21,11 @@ import { eventBus } from "@/main.js";
 export default {
     name: 'planet-fact',
     props: ['selectedPlanet'],
+
     methods: {
       takeQuiz: function() {
         eventBus.$emit('take-quiz')
-      }
+      },
     }
 }
 </script>

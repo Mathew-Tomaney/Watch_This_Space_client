@@ -1,6 +1,6 @@
 <template lang="html">
   <section>
-    <h2>THIS WILL BE THE FUN FACTS SECTION</h2>
+    <h2>{{selectedPlanet.name}}</h2>
     <planet-fact :selectedPlanet="selectedPlanet" />
   </section>
 </template>
@@ -24,5 +24,14 @@ section{
     background-color:#C64D56;
     height: 45vh;
     margin: 0px;
+}
+
+h2 {
+  font-size: 4em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-left: 80px;
+  text-shadow: 2px 2px 6px #243141;
 }
 </style>

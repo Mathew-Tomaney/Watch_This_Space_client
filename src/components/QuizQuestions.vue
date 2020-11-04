@@ -1,20 +1,17 @@
 <template lang="html">
     <div>
-    <h2>{{selectedQuestion}}</h2>
+        <h2>{{selectedQuestion}}</h2>
     </div>
 </template>
 
 <script>
-
 export default {
     name: 'quiz-questions',
     props: ['selectedQuestion'],
 }
-
 </script>
 
 <style lang="css" scoped>
-
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
@@ -31,5 +28,4 @@ h2 {
   /* margin-top: 80px; */
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
-
 </style>

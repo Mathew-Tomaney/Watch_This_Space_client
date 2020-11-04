@@ -4,10 +4,10 @@
   <!-- <h1>Watch This Space Frontend</h1> -->
   <solar-system :planets='planets'></solar-system>
   <launch-countdown :countdown='countdown'/>
-  <launchpad v-if="!this.selectedPlanet && !this.takeQuiz" />
+  <launchpad v-if="!this.selectedPlanet && !this.takeQuiz" :countdown='countdown'/>
   <planet-fact-container v-if="!this.takeQuiz && this.selectedPlanet"  :selectedPlanet='selectedPlanet' />
   <quiz-container v-if="this.takeQuiz" :planets='planets' :selectedPlanet='selectedPlanet'/>
-  <!-- <planet-reel v-if='planets.length' :planets='planets'></planet-reel> -->
+  <planet-reel v-if='planets.length' :planets='planets'></planet-reel>
   <footer-component />
 </main>
 </template>
@@ -83,9 +83,13 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
+
+
 main{
   font-family: 'Luckiest Guy', cursive;
   color: #C6F65A;
 }
+
+
 
 </style>

@@ -24,8 +24,8 @@ export default {
 <style lang="css" scoped>
 
  section {
-   background-image: url(../assets/pexels-photo-1146134.jpeg);
-   height: 40vh;
+   background-image: url(../assets/pexels-philippe-donn-1169754.jpg);
+   height: 25vh;
    width: 100vw;
    background-position: center;
    background-size: cover;
@@ -43,6 +43,7 @@ export default {
   justify-content: center;
   align-content: center;
 }
+
 
 
 

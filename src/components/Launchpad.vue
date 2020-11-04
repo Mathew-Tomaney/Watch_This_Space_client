@@ -1,76 +1,80 @@
 <template lang="html">
     <section>
-        
-            
-        <h2>Hedgehog adventure time</h2>
+        <!-- <h2>Hedgehog adventure time</h2> -->
         <div class="circular-sb">
-            <p>Welcome Astronaut, help our rocket to launch - answer 5 questions correctly to get us home ! <br> Pick a planet to start the quiz...</p>
-        
+            <p v-if="countdown>0">Welcome Astronaut! Help our rocket to launch - answer 5 questions correctly to get us home ! 
+            <br> Pick a planet to start the quiz...</p>
+            <p v-if="countdown<=0">Thanks for your help - lets go explore some more!<p>
             <div class="circle1"></div>
             <div class="circle2"></div>
-            </div>
+        </div>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'launchpad'
-
+    name: 'launchpad',
+    props: ['countdown']
+    
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 section{
-    background-color: #C6F65A;
-    height: 45vh;
+    background-color: #243141;
+    height: 48vh;
     margin: 0px;
-    color: #556272;
+    color: #243141;
+    padding: 40px;
+}
+
+h2 {
+  color: #ff6a66;
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 40px;
+  padding-left: 90px;
+  text-shadow: 2px 2px 6px #243141;
+
 }
 
 .circular-sb {
   width: 350px;
-  border: 5px solid #556272;
+  border: 5px solid #ff6a66;
   padding: 80px 0px;
-  margin: 30px auto;
+  margin: 0px auto;
   border-radius: 50%;
   text-align: center;
   font-size: 24px;
   font-weight: 900;
   /* font-family: arial; */
   position: relative;
-  color: #556272;
+  color: #243141;
+  background-color: #ffffff;
 }
 
 .circle1 {
-  border: 5px solid #556272;
+  border: 5px solid #ff6a66;
   position: absolute;
   width: 25px;
   padding: 20px;
   border-radius: 50%;
   right: -15px;
   bottom: 23px;
-}
-
-.circle1:before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  padding: 20px;
-  border-radius: 50%;
-  right: 0px;
-  bottom: 0px;
-  background: #C6F65A;
+  background-color: #ffffff;
 }
 
 .circle2 {
-  border: 5px solid #556272;
+  border: 5px solid #ff6a66;
   position: absolute;
   width: 5px;
   padding: 10px 15px;
   border-radius: 50%;
   right: -60px;
   bottom: 5px;
+  background-color: #ffffff;
 }
 
 </style>

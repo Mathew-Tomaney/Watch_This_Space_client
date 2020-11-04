@@ -28,6 +28,10 @@ export default {
 
 <style lang='css' >
 
+area:hover{
+  transition: transform .2s;
+}
+
 .Sun{
   z-index: 1;
   background-repeat: repeat;

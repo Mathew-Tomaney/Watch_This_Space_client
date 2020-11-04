@@ -10,8 +10,10 @@
         <h4>{{selectedPlanet.name}} is a<span v-if="selectedPlanet.funFacts.planetType.charAt(0) === 'I'">n</span> {{selectedPlanet.funFacts.planetType}} type planet.</h4>
         <h4>Temperature on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.temperature}}</h4>
       </hgroup>
-      <img :src="selectedPlanet.img" alt="planet image" />
-      <button v-on:click="takeQuiz">Take a Quiz!</button>
+      <div class="fact-img">
+        <img :src="selectedPlanet.img" alt="planet image" />
+        <button v-on:click="takeQuiz">Take a Quiz!</button>
+      </div>
     </section>
   </aside>
 </template>
@@ -51,6 +53,8 @@ h4 {
   border-radius: 5px;
   padding: 5px;
   margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -71,21 +75,34 @@ p {
 }
 
 img{
-  width: 15vw;
+  width: 20vw;
   height: 15vh;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 button {
   font-family: 'Luckiest Guy', cursive;
   padding: 10px;
   width: 20vw;
-  margin: auto;
+  /* margin: auto; */
   border-radius: 20px;
   font-size: 1em;
   color: #C6F65A;
   background-color: #C64D56;
+}
+
+hgroup {
+  overflow: scroll;
+  height: 33vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fact-img {
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
 </style>

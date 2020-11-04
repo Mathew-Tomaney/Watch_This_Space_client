@@ -53,6 +53,7 @@ h4 {
   border-radius: 5px;
   padding: 5px;
   margin-left: 15px;
+  margin-right: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -71,6 +72,7 @@ p {
   border-radius: 5px;
   padding: 5px;
   margin-left: 15px;
+  margin-right: 15px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 

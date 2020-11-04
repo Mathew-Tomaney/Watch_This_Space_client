@@ -20,8 +20,18 @@ export default {
 
 <style lang="css" scoped>
 
-h3 {
-    color: white;
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  background-color: white;
+  color: #243141;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 30px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 </style>

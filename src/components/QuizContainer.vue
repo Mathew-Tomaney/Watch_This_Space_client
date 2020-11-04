@@ -1,10 +1,12 @@
 <template lang="html">
   <aside>
-      <h2>THIS WILL BE THE QUIZ SECTION</h2>
-      <quiz-questions :selectedQuestion='this.randomQuestion.question'></quiz-questions>
-      <quiz-answers v-on:click="this.checkAnswer(answer)" v-for="(answer, index) in this.allAnswers" :answer='answer' :key="index"></quiz-answers>
-      <p>{{this.result}}</p>
-      <!-- <button :on-click="this.getRandomQuestion">BUTTON</button> -->
+      <h2>{{selectedPlanet.name}} quiz!</h2>
+      <section>
+        <quiz-questions :selectedQuestion='this.randomQuestion.question'></quiz-questions>
+        <quiz-answers v-on:click="this.checkAnswer(answer)" v-for="(answer, index) in this.allAnswers" :answer='answer' :key="index"></quiz-answers>
+        <p>{{this.result}}</p>
+        <!-- <button :on-click="this.getRandomQuestion">BUTTON</button> -->
+      </section>
   </aside>
 </template>
 
@@ -75,11 +77,38 @@ export default {
 
 <style lang="css" scoped>
 
-aside{
+aside {
   background-color: #243141;
 
-  height: 30vh;
+  height: 45vh;
   color: white;
+  margin: 0px;
 }
+
+section {
+    background: #ff6a66;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+    width: 80vw;
+    height: 35vh;
+    border-radius: 20px;
+    margin: auto;
+    align-content: center;
+    justify-items: center;
+}
+
+h2 {
+  font-size: 4em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-left: 80px;
+  text-shadow: 2px 2px 6px #090b0f;
+  color: #C6F65A;
+}
+
+quiz-questions{
+  margin-top: 20px;
+}
+
 
 </style>

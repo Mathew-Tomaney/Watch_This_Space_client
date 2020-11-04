@@ -116,11 +116,11 @@ button {
   margin-top: 10px;
   margin: auto;
   letter-spacing: 2pt;
-  line-height: 20px;
   border-radius: 20px;
   font-size: 1em;
-  color: #243141;
+  color: #ffffff;
   background-color: #47cdc6;
+  
 }
 
 .true {

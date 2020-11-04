@@ -1,6 +1,6 @@
 <template lang="html">
   <section>
-    <h2>THIS WILL BE THE PLANET IMAGE REEL</h2>
+    <!-- <h2>THIS WILL BE THE PLANET IMAGE REEL</h2> -->
     <ul class="scroll-box">
         <img v-for='(planet, index) in planets' :key='index' :src="planet.img" alt="planet image"></img>
     </ul>
@@ -24,11 +24,14 @@ section{
 
 ul {
     list-style-type: none;
+    width: 80vw;
 }
 
 img{
-    width: 15vw;
+    /* width: 15vw; */
+    height: 15vh;
     margin: 10px;
+    padding: 0px;
     border-radius: 10px;
     align-content: center;
 
@@ -37,11 +40,14 @@ img{
 }
 
 .scroll-box{
-    width: 100vw;
+    width: 95vw;
     height: 40vh;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
+    margin: auto;
+
+    align-content: center;
 }
 
 </style>

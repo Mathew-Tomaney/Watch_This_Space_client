@@ -2,10 +2,11 @@
   <aside>
       <h2>{{selectedPlanet.name}} quiz!</h2>
       <section>
+        <div class='question-container'>
         <quiz-questions :selectedQuestion='this.randomQuestion.question'></quiz-questions>
-        <quiz-answers v-for="(answer, index) in this.allAnswers" :answer='answer' :key="index"></quiz-answers>
-        <p>{{this.result}}</p>
-        <button v-on:click="goLaunchpad" v-if="this.result">Back to the launchpad!</button>
+        <quiz-answers v-for="(answer, index) in allAnswers" :selectedAnswer="selectedAnswer" :answer='answer' :key="index" :correctAnswer="randomQuestion.answer"></quiz-answers>
+        </div>
+        <button v-on:click="goLaunchpad" v-if="correct">Back to the launchpad!</button>
       </section>
   </aside>
 </template>
@@ -14,6 +15,7 @@
 import QuizQuestions from "./QuizQuestions.vue";
 import QuizAnswers from "./QuizAnswers.vue";
 import {eventBus} from "@/main.js"
+
 export default {
   name: 'quiz-container',
   props: ['selectedPlanet', 'planets'],
@@ -23,7 +25,7 @@ export default {
   },
   data() {
     return {
-      selectedAnswer: ""
+      selectedAnswer: null
     }
   },
   computed: {
@@ -38,14 +40,8 @@ export default {
       }
       return this.shuffle(answers)
     },
-    result: function() {
-      if(this.selectedAnswer){
-      if(this.selectedAnswer === this.randomQuestion.answer){
-        return true
-        } else {
-          return false
-        }
-      }
+    correct: function () {
+      return this.randomQuestion.answer === this.selectedAnswer
     }
   },
   methods: {
@@ -83,7 +79,7 @@ export default {
 aside {
   background-color: #243141;
 
-  height: 45vh;
+  height: 48vh;
   color: white;
   margin: 0px;
 }
@@ -98,6 +94,9 @@ section {
     align-content: center;
     justify-items: center;
 }
+.question-container{
+  padding-top: 20px;
+}
 
 h2 {
   font-size: 4em;
@@ -109,9 +108,23 @@ h2 {
   color: #C6F65A;
 }
 
-quiz-questions{
-  margin-top: 20px;
+button {
+  display: block;
+  font-family: 'Luckiest Guy', cursive;
+  padding: 10px;
+  width: 40vw;
+  margin-top: 10px;
+  margin: auto;
+  letter-spacing: 2pt;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  color: #243141;
+  background-color: #47cdc6;
 }
 
+.true {
+  background-color: #C6F65A;
+}
 
 </style>

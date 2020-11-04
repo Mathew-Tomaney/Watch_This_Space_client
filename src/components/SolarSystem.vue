@@ -24,7 +24,7 @@ export default {
 <style lang="css" scoped>
 
  section {
-   background-image: url(../assets/2k_stars.jpg);
+   background-image: url(../assets/pexels-photo-1146134.jpeg);
    height: 40vh;
    width: 100vw;
    background-position: center;

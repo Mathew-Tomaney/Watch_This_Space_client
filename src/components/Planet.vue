@@ -116,7 +116,7 @@ export default {
   z-index: 7;
   background-repeat: repeat;
   background-size: cover;
-  background-image: url(../assets/2k_venus_surface.jpg);
+  background-image: url(../assets/2k_saturn.jpg);
   box-shadow: inset -5px -5px 10px rgba(0,0,0,.5);
 
   width: 0.45em;

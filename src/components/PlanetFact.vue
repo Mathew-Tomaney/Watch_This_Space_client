@@ -4,7 +4,11 @@
       <hgroup>
         <p>{{selectedPlanet.description}}</p>
         <h4>{{selectedPlanet.name}} has {{selectedPlanet.funFacts.moons}} moons.</h4>
-        <h4>The length of year in {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
+        <h4>One year on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
+        <h4>One day lasts for {{selectedPlanet.funFacts.oneEarthDay}}.</h4>
+        <h4>Gravity on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.gravity}}</h4>
+        <h4>{{selectedPlanet.name}} is a {{selectedPlanet.funFacts.planetType}} type planet.</h4>
+        <h4>Temperature on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.temperature}}</h4>
       </hgroup>
       <img :src="selectedPlanet.img" alt="planet image" />
       <button v-on:click="takeQuiz">Take a Quiz!</button>
@@ -44,6 +48,9 @@ h4 {
   display: block;
   background-color: white;
   border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 section{
@@ -57,6 +64,9 @@ p {
   display: block;
   background-color: white;
   border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 img{
@@ -64,6 +74,17 @@ img{
   height: 15vh;
   margin: 10px;
   border-radius: 10px;
+}
+
+button {
+  font-family: 'Luckiest Guy', cursive;
+  padding: 10px;
+  width: 20vw;
+  margin: auto;
+  border-radius: 20px;
+  font-size: 1em;
+  color: #C6F65A;
+  background-color: #C64D56;
 }
 
 </style>

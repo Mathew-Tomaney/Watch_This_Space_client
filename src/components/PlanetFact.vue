@@ -22,12 +22,6 @@ export default {
         eventBus.$emit('take-quiz')
       }
     }
-
-    // data(){
-    //     return{
-    //         planetObject: null
-    //     }
-    // }
 }
 </script>
 
@@ -42,13 +36,27 @@ aside{
     border-radius: 20px;
     margin: auto;
     align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #243141;
+}
+
+h4 {
+  display: block;
+  background-color: white;
+  border-radius: 5px;
 }
 
 section{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     margin: auto;
     
+}
+
+p {
+  display: block;
+  background-color: white;
+  border-radius: 5px;
 }
 
 img{

@@ -1,6 +1,5 @@
 <template lang="html">
   <aside>
-      <h2>THIS WILL BE THE QUIZ SECTION</h2>
       <quiz-questions :selectedQuestion='this.randomQuestion.question'></quiz-questions>
       <quiz-answers v-on:click="this.checkAnswer(answer)" v-for="(answer, index) in this.allAnswers" :answer='answer' :key="index"></quiz-answers>
       <p>{{this.result}}</p>
@@ -78,8 +77,9 @@ export default {
 aside{
   background-color: #243141;
 
-  height: 30vh;
+  height: 45vh;
   color: white;
+  margin: 0px;
 }
 
 </style>

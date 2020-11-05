@@ -14,7 +14,9 @@ export default {
 
 footer{
     background-color: #556272;
-    padding: 10px;
+    padding: 25px;
+    padding-left: 230px;
+    justify-content: center;
 }
 
 </style>

@@ -2,7 +2,7 @@
     <section>
         <!-- <h2>Hedgehog adventure time</h2> -->
         <div class="circular-sb">
-            <p v-if="countdown>0">Welcome Astronaut! Help our rocket to launch - answer 5 questions correctly to get us home ! 
+            <p v-if="countdown>0">Welcome Astronaut! Help our rocket to launch - answer enough questions correctly to get us home ! 
             <br> Pick a planet to start the quiz...</p>
             <p v-if="countdown<=0">Thanks for your help - lets go explore some more!<p>
             <div class="circle1"></div>

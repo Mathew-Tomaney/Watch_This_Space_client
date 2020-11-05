@@ -78,8 +78,8 @@ p {
 }
 
 img{
-  width: 20vw;
-  height: 15vh;
+  width: 25vw;
+  /* height: 15vh; */
   /* margin: 10px; */
   border-radius: 10px;
   margin-bottom: 10px;
@@ -134,6 +134,19 @@ hgroup {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
 
 .fact-img {
   margin-left: 40px;

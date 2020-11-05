@@ -1,3 +1,4 @@
+
 <template lang="html">
     <area @click="handleClick(planet)" :class='[planet.name, orbitClass]'>
     </area>

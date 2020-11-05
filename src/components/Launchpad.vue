@@ -2,13 +2,14 @@
     <section>
         <!-- <h2>Hedgehog adventure time</h2> -->
         <div class="circular-sb">
-            <p v-if="countdown>0">Welcome <br> Astronaut! <br> <br>
+            <p v-if="countdown>0">Welcome <br> Astronaut! <br> 
             Help our rocket to launch - answer enough questions correctly to get us home ! 
-            <br> Pick a planet to start the quiz...</p>
+            <br> Pick a planet to <br> start the quiz...</p>
             <p v-if="countdown<=0">Thanks for your help - lets go explore some more!<p>
             <div class="circle1"></div>
             <div class="circle2"></div>
         </div>
+        <!-- <img src="" alt=""> -->
     </section>
 </template>
 
@@ -23,6 +24,9 @@ export default {
 <style lang="css" scoped>
 
 section{
+    background-image: url(../assets/hedgehogs-astronauts-sitting-planet_77984-964.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #243141;
     height: 48vh;
     margin: 0px;
@@ -49,8 +53,8 @@ p {
 .circular-sb {
   width: 350px;
   border: 5px solid #ff6a66;
-  padding: 80px 0px;
-  margin: 0px auto;
+  padding: 20px 0px;
+  /* margin: 0px auto; */
   border-radius: 50%;
   text-align: center;
   /* font-size: 24px;
@@ -58,7 +62,7 @@ p {
   /* font-family: arial; */
   position: relative;
   color: #243141;
-  background-color: #ffffff;
+  background-color: rgba( 255, 255, 255, 0.8);
 }
 
 .circle1 {
@@ -68,8 +72,8 @@ p {
   padding: 20px;
   border-radius: 50%;
   right: -15px;
-  bottom: 23px;
-  background-color: #ffffff;
+  bottom: 190px;
+  background-color: rgba( 255, 255, 255, 0.8);
 }
 
 .circle2 {
@@ -79,8 +83,8 @@ p {
   padding: 10px 15px;
   border-radius: 50%;
   right: -60px;
-  bottom: 5px;
-  background-color: #ffffff;
+  bottom: 170px;
+  background-color: rgba( 255, 255, 255, 0.8);
 }
 
 </style>

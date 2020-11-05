@@ -7,6 +7,7 @@
         <h4>One year on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.yearLength}}</h4>
         <h4 v-if="selectedPlanet.funFacts.oneEarthDay">One day lasts for {{selectedPlanet.funFacts.oneEarthDay}}.</h4>
         <h4>Gravity on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.gravity}}</h4>
+        <h4 v-if="selectedPlanet.funFacts.distanceFromSun">{{selectedPlanet.name}} is {{selectedPlanet.funFacts.distanceFromSun}} from the Sun.</h4>
         <h4>{{selectedPlanet.name}} is a<span v-if="selectedPlanet.funFacts.planetType.charAt(0) === 'I'">n</span> {{selectedPlanet.funFacts.planetType}} type planet.</h4>
         <h4>Temperature on {{selectedPlanet.name}} is {{selectedPlanet.funFacts.temperature}}</h4>
       </hgroup>

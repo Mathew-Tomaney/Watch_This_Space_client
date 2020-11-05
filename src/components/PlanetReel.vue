@@ -18,7 +18,7 @@ export default {
 
 section{
     background-color: #C6F65A;
-    height: 20vh;
+    height: 22vh;
     width: 100vw;
 }
 
@@ -35,19 +35,30 @@ img{
     border-radius: 10px;
     align-content: center;
 
-    cursor: pointer;
+    /* cursor: pointer; */
 
 }
 
 .scroll-box{
     width: 95vw;
-    height: 40vh;
+    height: 18vh;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
     margin: auto;
 
     align-content: center;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 </style>

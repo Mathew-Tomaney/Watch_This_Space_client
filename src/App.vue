@@ -37,7 +37,7 @@ export default {
       planets: [],
       selectedPlanet: null,
       takeQuiz: false,
-      countdown: 5
+      countdown: 3
     }
   },
 

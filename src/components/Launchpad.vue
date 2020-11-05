@@ -2,7 +2,8 @@
     <section>
         <!-- <h2>Hedgehog adventure time</h2> -->
         <div class="circular-sb">
-            <p v-if="countdown>0">Welcome Astronaut! Help our rocket to launch - answer enough questions correctly to get us home ! 
+            <p v-if="countdown>0">Welcome <br> Astronaut! <br> <br>
+            Help our rocket to launch - answer enough questions correctly to get us home ! 
             <br> Pick a planet to start the quiz...</p>
             <p v-if="countdown<=0">Thanks for your help - lets go explore some more!<p>
             <div class="circle1"></div>
@@ -37,7 +38,12 @@ h2 {
   padding-top: 40px;
   padding-left: 90px;
   text-shadow: 2px 2px 6px #243141;
+}
 
+p {
+  letter-spacing: 3pt;
+  line-height: 20pt;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .circular-sb {
@@ -47,8 +53,8 @@ h2 {
   margin: 0px auto;
   border-radius: 50%;
   text-align: center;
-  font-size: 24px;
-  font-weight: 900;
+  /* font-size: 24px;
+  font-weight: 900; */
   /* font-family: arial; */
   position: relative;
   color: #243141;
